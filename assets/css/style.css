@@ -1,38 +1,82 @@
+* {
+    margin: 0em;
+    padding: 0em;
+    border: none;
+}
+
+:root {
+    --background: rgba(0, 214, 170, .85);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 body {
+    margin: 0;
+    background: #222;
+    font-weight: 400;
+    font-family: sans-serif;
+
+}
+
+.content {
     height: 100vh;
     width: 100%;
-    background-image: url(../images/background.webp);
-    background-repeat: no-repeat;
+    background-image: url(../images/meditation.webp);
+    background-color: #333;
     background-size: cover;
-
+    display: grid;
+    place-items: center;
 }
 
-.header {
+
+/* navigation style start */
+header {
+    background: var(--background);
+    text-align: center;
     position: fixed;
-    top: 0;
-    left: -10px;
-    width: 99%;
-    padding: 20px;
-    background: rgb(183, 189, 194);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 50;
+    width: 100%;
+    z-index: 900;
+}
+
+.nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--background);
+    width: 100%;
+    display: none;
 
 }
 
-.logo {
-    font-size: 32px;
-    color: rgb(7, 1, 1);
-    text-decoration: none;
-    font-weight: 500;
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-.navbar a {
-    font-size: 18px;
-    color: rgb(7, 2, 2);
-    font-weight: 250;
-    text-decoration: none;
-    margin-left: 40px;
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
 
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
+}
+
+nav a:hover {
+    color: #000;
+}
+
+.nav-toggle:checked~nav {
+    display: block;
 }
