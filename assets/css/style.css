@@ -10,7 +10,7 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
 }
 
 .index-body {
@@ -29,6 +29,10 @@ body {
     background-image: url(../images/med4.jpg)
 }
 
+#history {
+    background-image: url(../images/waterbackground.jpg)
+}
+
 .content {
     height: 100vh;
     width: 100%;
@@ -37,8 +41,6 @@ body {
     display: grid;
     place-items: center;
 }
-
-
 /* navigation style start */
 header {
     background: var(--background);
@@ -140,6 +142,8 @@ nav a:hover {
     align-items: center;
     height: 100%;
     flex-direction: column;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .card {
@@ -149,7 +153,7 @@ nav a:hover {
     overflow: hidden;
     height: 400px;
     width: 100%;
-
+    border-radius: 25%;
 }
 
 .card img {
@@ -157,7 +161,7 @@ nav a:hover {
     height: 100%;
     display: block;
     object-fit: cover;
-
+    border-radius: 25%;
 }
 
 .card h2 {
@@ -172,7 +176,6 @@ nav a:hover {
     font-size: 1.4em;
     padding: 0.5em;
     margin: 0;
-
 }
 
 .card:hover img {
@@ -188,6 +191,27 @@ nav a:hover {
 .imgbox {
     height: 100%;
 }
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background: white;
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 10px black;
+}
+
+.section-container {
+    padding: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-card>div {
+    padding: 1.5rem;
+}
+
 
 @media screen and (min-width: 800px) {
     .nav-toggle-label {
@@ -209,7 +233,6 @@ nav a:hover {
         display: flex;
         justify-content: flex-end;
         align-items: center;
-
     }
 
     .nav a {
@@ -238,8 +261,6 @@ nav a:hover {
     .nav ul {
         display: flex;
         justify-content: flex-end;
-
-
     }
 
     .nav li {
@@ -253,6 +274,20 @@ nav a:hover {
 
     .card {
         width: auto;
+    }
+
+    .section-card {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .section-card img {
+        flex: 0 1 50%;
+        max-width: 50%;
     }
 
 }
