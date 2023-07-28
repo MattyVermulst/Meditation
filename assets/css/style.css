@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@500&family=Quicksand&display=swap');
+
 :root {
     --background: rgba(0, 214, 170, .85);
 }
@@ -26,11 +28,32 @@ body {
 }
 
 #meditation {
-    background-image: url(../images/med4.jpg)
+    background-image: url(../images/med4.jpg);
+
+}
+
+#meditation p {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+#meditation h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
 }
 
 #history {
     background-image: url(../images/waterbackground.jpg)
+}
+
+#history h1 {
+    font-family: 'Edu SA Beginner', cursive;
+    font-weight: 600;
+}
+
+#history p {
+    font-family: 'Edu SA Beginner', cursive;
+    font-weight: 500;
 }
 
 .content {
